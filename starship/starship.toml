@@ -1,5 +1,8 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
+# Increase timeout for slow commands like pyenv shims
+command_timeout = 2000
+
 format = """
 [](color_orange)\
 $os\
