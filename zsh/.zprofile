@@ -15,3 +15,5 @@ eval "$(pyenv virtualenv-init -)"
 
 # pipx (eventually place in ~/.zprofile)
 export PATH="/Users/henning/.local/bin:$PATH"
+
+. "$HOME/.cargo/env"
