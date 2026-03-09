@@ -1,3 +1,6 @@
+# Obsidian
+export PATH="$PATH:/Applications/Obsidian.app/Contents/MacOS"
+
 # MacPorts (eventually place in ~/.zprofile)
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 
@@ -17,3 +20,4 @@ eval "$(pyenv virtualenv-init -)"
 export PATH="/Users/henning/.local/bin:$PATH"
 
 . "$HOME/.cargo/env"
+
