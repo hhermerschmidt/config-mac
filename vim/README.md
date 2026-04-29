@@ -14,7 +14,15 @@ sudo port install vim
 
 `.vimrc` lives in `~/`.
 
-Manual installation:
+### via stow
+
+From the root of this repo:
+
+```zsh
+stow vim
+```
+
+### Manual
 
 ```zsh
 cp .vimrc ~/.vimrc

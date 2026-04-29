@@ -20,7 +20,17 @@ Custom files live in `$ZSH_CUSTOM` (default: `~/.oh-my-zsh/custom/`).
 
 ## Configuration Files
 
-Manual installation:
+### via stow
+
+From the root of this repo:
+
+```zsh
+stow zsh
+```
+
+This symlinks all zsh config files to `~/` and `~/.oh-my-zsh/custom/`.
+
+### Manual
 
 ```zsh
 cp .zshrc ~/.zshrc

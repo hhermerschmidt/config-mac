@@ -7,15 +7,17 @@ Git configuration.
 - `.gitconfig` – global git config, tracked in this repo
 - `.gitconfig.local` – personal user info, **not tracked**, must be created manually
 
-## Installation
+## Configuration
 
-Copy `.gitconfig` to `~/`:
+### via stow
+
+From the root of this repo:
 
 ```zsh
-cp .gitconfig ~/.gitconfig
+stow git
 ```
 
-Create `.gitconfig.local` manually with your personal data:
+Then create `.gitconfig.local` manually with your personal data:
 
 ```zsh
 cat > ~/.gitconfig.local << EOF
@@ -24,6 +26,14 @@ cat > ~/.gitconfig.local << EOF
 	email = your@email.com
 EOF
 ```
+
+### Manual
+
+```zsh
+cp git/.gitconfig ~/.gitconfig
+```
+
+Then create `.gitconfig.local` as above.
 
 `.gitconfig` includes `.gitconfig.local` automatically via:
 

@@ -16,7 +16,15 @@ sudo port install eza
 export EZA_CONFIG_DIR="$HOME/.config/eza"
 ```
 
-Manual installation:
+### via stow
+
+From the root of this repo:
+
+```zsh
+stow eza
+```
+
+### Manual
 
 ```zsh
 mkdir -p ~/.config/eza

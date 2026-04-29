@@ -12,7 +12,15 @@ sudo port install fzf
 
 `completion.zsh` and `key-bindings.zsh` live in `~/.config/fzf/`.
 
-Manual installation:
+### via stow
+
+From the root of this repo:
+
+```zsh
+stow fzf
+```
+
+### Manual
 
 ```zsh
 mkdir -p ~/.config/fzf
@@ -20,14 +28,14 @@ cp .config/fzf/completion.zsh ~/.config/fzf/completion.zsh
 cp .config/fzf/key-bindings.zsh ~/.config/fzf/key-bindings.zsh
 ```
 
-Source both files in `~/.oh-my-zsh/custom/init_tools.zsh`:
+Source both files in `$ZSH_CUSTOM/init_tools.zsh`:
 
 ```zsh
 source ~/.config/fzf/key-bindings.zsh
 source ~/.config/fzf/completion.zsh
 ```
 
-Set up aliases in `~/.oh-my-zsh/custom/aliases.zsh`:
+Set up aliases in `$ZSH_CUSTOM/aliases.zsh`:
 
 ```zsh
 alias fzfp="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
