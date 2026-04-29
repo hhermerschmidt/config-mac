@@ -1,4 +1,4 @@
-all_packages := 'zsh starship zed eza fzf ranger vim kitty git'
+all_packages := 'zsh starship zed eza fzf ranger vim kitty git yazi'
 
 # Show available commands
 help:

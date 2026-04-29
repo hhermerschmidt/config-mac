@@ -25,6 +25,7 @@ Run `just list-packages` to see all managed packages. The following packages are
 | `vim` | `~/.vimrc` |
 | `kitty` | `~/.config/kitty/` |
 | `git` | `~/.gitconfig` |
+| `yazi` | `~/.config/yazi/` |
 
 ### Installation
 
