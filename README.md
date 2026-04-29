@@ -14,7 +14,17 @@ sudo port install stow just
 
 Run `just list-packages` to see all managed packages. The following packages are installed as symlinks into `~/`:
 
-PackageConfig location`zsh~/`, `~/.oh-my-zsh/custom/starship~/.config/starship.tomlzed~/.config/zed/eza~/.config/eza/fzf~/.config/fzf/ranger~/.config/ranger/vim~/.vimrckitty~/.config/kitty/git~/.gitconfig`
+| Package | Config location |
+|---|---|
+| `zsh` | `~/`, `~/.oh-my-zsh/custom/` |
+| `starship` | `~/.config/starship.toml` |
+| `zed` | `~/.config/zed/` |
+| `eza` | `~/.config/eza/` |
+| `fzf` | `~/.config/fzf/` |
+| `ranger` | `~/.config/ranger/` |
+| `vim` | `~/.vimrc` |
+| `kitty` | `~/.config/kitty/` |
+| `git` | `~/.gitconfig` |
 
 ### Installation
 
