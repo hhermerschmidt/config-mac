@@ -12,12 +12,10 @@ sudo port install fzf
 
 `completion.zsh` and `key-bindings.zsh` live in `~/.config/fzf/`.
 
-### via stow
-
-From the root of this repo:
+### Installation
 
 ```zsh
-stow fzf
+just install fzf
 ```
 
 ### Manual

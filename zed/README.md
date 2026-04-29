@@ -14,12 +14,10 @@ brew install --cask zed
 
 `settings.json` lives in `~/.config/zed/settings.json`.
 
-### via stow
-
-From the root of this repo:
+### Installation
 
 ```zsh
-stow zed
+just install zed
 ```
 
 ### Manual

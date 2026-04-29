@@ -9,15 +9,13 @@ Git configuration.
 
 ## Configuration
 
-### via stow
-
-From the root of this repo:
+### Installation
 
 ```zsh
-stow git
+just install git
 ```
 
-Then create `.gitconfig.local` manually with your personal data:
+Then create `~/.gitconfig.local` with your personal user info:
 
 ```zsh
 cat > ~/.gitconfig.local << EOF
@@ -27,20 +25,20 @@ cat > ~/.gitconfig.local << EOF
 EOF
 ```
 
-### Manual
-
-```zsh
-cp git/.gitconfig ~/.gitconfig
-```
-
-Then create `.gitconfig.local` as above.
-
 `.gitconfig` includes `.gitconfig.local` automatically via:
 
 ```ini
 [include]
 	path = ~/.gitconfig.local
 ```
+
+### Manual
+
+```zsh
+cp .gitconfig ~/.gitconfig
+```
+
+Then create `.gitconfig.local` as above.
 
 ## Dependencies
 

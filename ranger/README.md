@@ -15,12 +15,10 @@ pipx inject ranger-fm pillow
 
 `rc.conf` and `scope.sh` live in `~/.config/ranger/`.
 
-### via stow
-
-From the root of this repo:
+### Installation
 
 ```zsh
-stow ranger
+just install ranger
 ```
 
 ### Manual

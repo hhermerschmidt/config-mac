@@ -14,12 +14,10 @@ sudo port install starship
 
 `starship.toml` lives in `~/.config/starship.toml`.
 
-### via stow
-
-From the root of this repo:
+### Installation
 
 ```zsh
-stow starship
+just install starship
 ```
 
 ### Manual
@@ -28,7 +26,7 @@ stow starship
 cp .config/starship.toml ~/.config/starship.toml
 ```
 
-Enable in `~/.zshrc`:
+Enable in `$ZSH_CUSTOM/init_tools.zsh`:
 
 ```zsh
 eval "$(starship init zsh)"

@@ -12,12 +12,10 @@ sudo port install kitty
 
 `kitty.conf` and `ayu-mirage.conf` live in `~/.config/kitty/`.
 
-### via stow
-
-From the root of this repo:
+### Installation
 
 ```zsh
-stow kitty
+just install kitty
 ```
 
 ### Manual

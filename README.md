@@ -1,6 +1,60 @@
 # Mac Config Files
 
-Config files for the shell and terminal apps
+Config files for shell and terminal apps, managed with [stow](https://www.gnu.org/software/stow/) via [just](https://github.com/casey/just).
+
+## Setup
+
+### Prerequisites
+
+```zsh
+sudo port install stow just
+```
+
+### Managed packages
+
+Run `just list-packages` to see all managed packages. The following packages are installed as symlinks into `~/`:
+
+PackageConfig location`zsh~/`, `~/.oh-my-zsh/custom/starship~/.config/starship.tomlzed~/.config/zed/eza~/.config/eza/fzf~/.config/fzf/ranger~/.config/ranger/vim~/.vimrckitty~/.config/kitty/git~/.gitconfig`
+
+### Installation
+
+Install all packages:
+
+```zsh
+just install
+```
+
+Install a single package:
+
+```zsh
+just install <package>
+```
+
+See all available commands:
+
+```zsh
+just
+```
+
+### After installing git
+
+Create `~/.gitconfig.local` with your personal user info (not tracked in this repo):
+
+```zsh
+cat > ~/.gitconfig.local << EOF
+[user]
+	name = Your Name
+	email = your@email.com
+EOF
+```
+
+### Documentation-only packages
+
+The following packages have no config files tracked here — see their `README.md` for installation and setup instructions:
+
+`atuin`, `bat`, `broot`, `delta`, `fonts`, `fuck`, `iterm2`, `lsd`, `navi`, `nvim`, `zoxide`
+
+---
 
 ## Terminal Emulators
 
@@ -27,7 +81,7 @@ Config files for the shell and terminal apps
 ### Basic Commands
 
 - [eza](https://github.com/eza-community/eza) (modern `ls` command)
-- [lsd](https://github.com/lsd-rs/lsd)(next gen `ls` command)
+- [lsd](https://github.com/lsd-rs/lsd) (next gen `ls` command)
 - [zoxide](https://github.com/ajeetdsouza/zoxide) (smarter `cd` command)
 - [bat](https://github.com/sharkdp/bat) (`cat` with syntax highlighting and Git integration)
 - [bat-extras](https://github.com/eth-p/bat-extras) (integrate `bat` with various command line tools)
@@ -38,7 +92,7 @@ Config files for the shell and terminal apps
 
 - [atuin](https://github.com/atuinsh/atuin) (magical shell history)
 - [fd](https://github.com/sharkdp/fd) (fast and user-friendly `find`)
-- [fzf](https://github.com/junegunn/fzf) (fuzzy finder; used by zoxide)
+- [fzf](https://github.com/junegunn/fzf) (fuzzy finder)
 
 ### Text Processing
 
