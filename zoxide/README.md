@@ -1,19 +1,23 @@
 # zoxide
 
-A smarter `cd` command
+[zoxide](https://github.com/ajeetdsouza/zoxide) is a smarter `cd` command that learns your most used directories.
 
-- Add alias to `$ZSH_CUSTOM/aliases.zsh`:
+## Installation
 
 ```zsh
-# $ZSH_CUSTOM/aliases.zsh
-
-alias cd="z"
+sudo port install zoxide
 ```
 
-- Initialise zoxide via `$ZSH_CUSTOM/init_tools.zsh`
+## Configuration
+
+No config file tracked here. Initialise in `$ZSH_CUSTOM/init_tools.zsh`:
 
 ```zsh
-# $ZSH_CUSTOM/init_tools.zsh
-
 eval "$(zoxide init zsh)"
+```
+
+Set up alias in `$ZSH_CUSTOM/aliases.zsh`:
+
+```zsh
+alias cd="z"
 ```

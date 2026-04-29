@@ -1,23 +1,39 @@
 # fzf
 
-A general purpose command-line fuzzy finder
+[fzf](https://github.com/junegunn/fzf) is a general purpose command-line fuzzy finder.
 
-- Copy config files (`completion.zsh`, `key-bindings.zsh`) to `~/.config/fzf`
-- Load config files on startup:
+## Installation
 
 ```zsh
-# $ZSH_CUSTOM/init_tools.sh
+sudo port install fzf
+```
 
+## Configuration
+
+`completion.zsh` and `key-bindings.zsh` live in `~/.config/fzf/`.
+
+Manual installation:
+
+```zsh
+mkdir -p ~/.config/fzf
+cp .config/fzf/completion.zsh ~/.config/fzf/completion.zsh
+cp .config/fzf/key-bindings.zsh ~/.config/fzf/key-bindings.zsh
+```
+
+Source both files in `~/.oh-my-zsh/custom/init_tools.zsh`:
+
+```zsh
 source ~/.config/fzf/key-bindings.zsh
 source ~/.config/fzf/completion.zsh
 ```
 
-- Enable preview using `vim`:
+Set up aliases in `~/.oh-my-zsh/custom/aliases.zsh`:
 
 ```zsh
-# $ZSH_CUSTOM/aliases.sh
-
-alias  fvim='vim $(fzf --preview="bat --color=always --theme=OneHalfDark --style=numbers {}")'
+alias fzfp="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
+alias fvim='vim $(fzf --preview="bat --color=always --theme=OneHalfDark --style=numbers {}")'
 ```
 
-- [Useful fzf shortcuts](https://pragmaticpineapple.com/four-useful-fzf-tricks-for-your-terminal/)
+## Useful shortcuts
+
+- [Four useful fzf tricks](https://pragmaticpineapple.com/four-useful-fzf-tricks-for-your-terminal/)

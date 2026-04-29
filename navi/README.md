@@ -1,12 +1,19 @@
 # navi
 
-[Navi](https://github.com/denisidoro/navi) is an interactive cheatsheet tool.
+[Navi](https://github.com/denisidoro/navi) is an interactive cheatsheet tool for the terminal.
 
-- Installation via package manager
-- Besides directly calling it using `navi`, navi can be interactively called via `^G`, if it is initialised during zsh startup:
+## Installation
 
 ```zsh
-# $ZSH_CUSTOM/init_tools.zsh
+sudo port install navi
+```
 
+## Configuration
+
+No config file tracked here. Initialise in `$ZSH_CUSTOM/init_tools.zsh`:
+
+```zsh
 eval "$(navi widget zsh)"
 ```
+
+Navi can then be called interactively via `Ctrl+G`.

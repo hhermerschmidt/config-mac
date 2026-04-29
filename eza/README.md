@@ -1,24 +1,33 @@
 # eza
 
-A modern replacement for `ls`
+[eza](https://github.com/eza-community/eza) is a modern replacement for `ls`.
 
-- See [here](https://github.com/eza-community/eza-themes) for themes
-- Copy theme file to `~/.config/eza`
-- Set `$EZA_CONFIG_DIR` to `/Users/<username>/.config/eza` (due to [this bug](https://github.com/eza-community/eza/issues/1224))
+## Installation
 
 ```zsh
-# ~/.zshenv
-
-export EZA_CONFIG_DIR="/Users/henning/.config/eza"
+sudo port install eza
 ```
 
-- Add aliases to `$ZSH_CUSTOM/aliases.zsh`:
+## Configuration
+
+`theme.yml` lives in `~/.config/eza/theme.yml`. eza finds it automatically via `$XDG_CONFIG_HOME/eza/` or `~/.config/eza/`. To use a custom path, set `EZA_CONFIG_DIR`:
 
 ```zsh
-# $ZSH_CUSTOM/aliases.zsh
+export EZA_CONFIG_DIR="$HOME/.config/eza"
+```
 
+Manual installation:
+
+```zsh
+mkdir -p ~/.config/eza
+cp .config/eza/theme.yml ~/.config/eza/theme.yml
+```
+
+Set up aliases in `$ZSH_CUSTOM/aliases.zsh`:
+
+```zsh
 alias ls='eza'
 alias l='eza -l --git --no-user --no-permissions'
-alias ll='eza -l --git'
-alias la='eza -la --git --color-scale'
+alias ll='eza -l --git --icons'
+alias la='eza -la --git --icons --color-scale'
 ```

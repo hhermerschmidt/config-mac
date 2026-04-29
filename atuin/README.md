@@ -1,12 +1,17 @@
 # atuin
 
-[atuin](https://github.com/atuinsh/atuin) replaces the existing shell history with a SQLite database.
+[atuin](https://github.com/atuinsh/atuin) replaces shell history with a SQLite database with sync, search, and backup.
 
-- Installation via package manager.
-- Initialise atuin via `$ZSH_CUSTOM/init_tools.zsh`
+## Installation
 
 ```zsh
-# $ZSH_CUSTOM/init_tools.zsh
+sudo port install atuin
+```
 
+## Configuration
+
+No config file tracked here. Initialise atuin in `$ZSH_CUSTOM/init_tools.zsh`:
+
+```zsh
 eval "$(atuin init zsh)"
 ```

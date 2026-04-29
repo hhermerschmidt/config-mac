@@ -1,11 +1,17 @@
 # bat
 
-A `cat` clone with syntax highlighting and Git integration
+[bat](https://github.com/sharkdp/bat) is a `cat` clone with syntax highlighting and Git integration.
 
-- Set up alias in `$ZSH_CUSTOM/aliases.zsh`
+## Installation
 
 ```zsh
-# $ZSH_CUSTOM/aliases.zsh
+sudo port install bat
+```
 
-alias cat=bat
+## Configuration
+
+No config file tracked here. Set up alias in `$ZSH_CUSTOM/aliases.zsh`:
+
+```zsh
+alias cat="bat"
 ```

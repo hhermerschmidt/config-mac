@@ -2,19 +2,22 @@
 
 [The Fuck](https://github.com/nvbn/thefuck) corrects typing errors in previous console commands.
 
-- Installation via package manager.
-- Initialise the fuck via `$ZSH_CUSTOM/init_tools.zsh`
+## Installation
 
 ```zsh
-# $ZSH_CUSTOM/init_tools.zsh
+sudo port install thefuck
+```
 
+## Configuration
+
+No config file tracked here. Initialise in `$ZSH_CUSTOM/init_tools.zsh`:
+
+```zsh
 eval "$(thefuck --alias)"
 ```
 
-- Add oh my zsh plugin
+Enable oh-my-zsh plugin in `~/.zshrc`:
 
 ```zsh
-# ~/.zshrc
-
-plugins=( ... thefuck)
+plugins=(...  thefuck)
 ```
