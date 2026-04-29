@@ -1,9 +1,15 @@
 # iTerm2
 
-- [iTerm2](https://iterm2.com)
+[iTerm2](https://iterm2.com) is a macOS terminal emulator.
+
+## Installation
+
+Download from [iterm2.com](https://iterm2.com).
 
 ## Color Schemes
 
-- [Collection](https://github.com/mbadolato/iTerm2-Color-Schemes) of color schemes for iTerm2.
-- Import color scheme file (`AyuMirage.itermcolors`) via iTerm2 → Preferences → Profiles → Colors → Color Presets → Import.
-- Select the imported color scheme from the Color Presets dropdown.
+`AyuMirage.itermcolors` is the active color scheme.
+
+- [Full collection](https://github.com/mbadolato/iTerm2-Color-Schemes) of color schemes for iTerm2
+
+Import via iTerm2 → Settings → Profiles → Colors → Color Presets → Import, then select from the dropdown.

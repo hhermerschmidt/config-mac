@@ -1,41 +1,54 @@
 # zsh
 
-Z shell
+[Z shell](https://zsh.sourceforge.io) – extended Bourne shell with many improvements.
+
+## Resources
 
 - [A guide to the terminal, console and shell](https://thevaluable.dev/guide-terminal-shell-console/)
 - [A guide to the zsh completion](https://thevaluable.dev/zsh-completion-guide-examples/)
-- [Using zsh without omz](https://dev.to/hbenvenutti/using-zsh-without-omz-4gch)
+- [Using zsh without Oh My Zsh](https://dev.to/hbenvenutti/using-zsh-without-omz-4gch)
 
-## Oh My ZSH
+## Oh My Zsh
 
-- [Oh My Zsh](https://ohmyz.sh) is a framework for managing the zsh configuration (via [themes](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes) and [plugins](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins)).
-- With using Oh My Zsh, the `zshrc` file is created automatically.
+[Oh My Zsh](https://ohmyz.sh) is a framework for managing zsh configuration via themes and plugins.
 
-### Theme
+```zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
 
-- A zsh theme modifies the prompt (git status, python venv, clock etc.)
-- Special font and color theme may be needed to let the theme render appropriately. These are part of the terminal configuration.
-- Using the [Powerlevel10k](https://github.com/romkatv/powerlevel10k) theme the prompt configuration is done via `~/.p10k.zsh`.
+Custom files live in `$ZSH_CUSTOM` (default: `~/.oh-my-zsh/custom/`).
+
+## Configuration Files
+
+Manual installation:
+
+```zsh
+cp .zshrc ~/.zshrc
+cp .zprofile ~/.zprofile
+cp .zshenv ~/.zshenv
+cp .p10k.zsh ~/.p10k.zsh
+cp .oh-my-zsh/custom/aliases.zsh $ZSH_CUSTOM/aliases.zsh
+cp .oh-my-zsh/custom/init_tools.zsh $ZSH_CUSTOM/init_tools.zsh
+```
 
 ## Config Files Load Order
 
-> Default behavior dictates the following order for ZSH startup files:
-> 
-> - `/etc/zshenv`
-> - `~/.zshenv`
-> - `/etc/zprofile` (if login shell)
-> - `~/.zprofile`   (if login shell)
-> - `/etc/zshrc`    (if interactive)
-> - `~/.zshrc`      (if interactive)
-> - `/etc/zlogin`   (if login shell)
-> - `~/.zlogin`     (if login shell)
-> 
-> **Notes:**
-> 
-> - `zshenv` is the place to set *env*ironment variables
-> - `zshrc` is the place for aliases, functions etc
->
-> Setting environment variables in `zshenv` means that they'll be present for
-> non-interactive uses (think cron commands). This is what you want.
->
-> [Reference](https://gist.githubusercontent.com/pbrisbin/45654dc74787c18e858c/raw/191700523521f8579453a3e00476ed3c14a24354/headache.md)
+```
+/etc/zshenv
+~/.zshenv          ← environment variables (available everywhere, incl. non-interactive)
+/etc/zprofile      (login shell)
+~/.zprofile        (login shell) ← PATH and login-time setup
+/etc/zshrc         (interactive)
+~/.zshrc           (interactive) ← aliases, functions, plugins
+/etc/zlogin        (login shell)
+~/.zlogin          (login shell)
+```
+
+## Prompt
+
+- [Powerlevel10k](https://github.com/romkatv/powerlevel10k) – configured via `.p10k.zsh` (kept as fallback)
+- [Starship](https://starship.rs) – currently active, see `../starship/`
+
+## Plugins
+
+Managed via Oh My Zsh. Active plugins are defined in `~/.zshrc`.

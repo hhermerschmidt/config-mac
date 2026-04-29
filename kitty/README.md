@@ -1,10 +1,8 @@
 # kitty
 
-- [kitty](https://sw.kovidgoyal.net/kitty/)
+[kitty](https://sw.kovidgoyal.net/kitty/) is a fast, GPU-based terminal emulator.
 
 ## Installation
-
-Install via MacPorts:
 
 ```zsh
 sudo port install kitty
@@ -12,17 +10,19 @@ sudo port install kitty
 
 ## Configuration
 
-Install config files via stow from the root of this repo:
+`kitty.conf` and `ayu-mirage.conf` live in `~/.config/kitty/`.
+
+Manual installation:
 
 ```zsh
-stow kitty
+mkdir -p ~/.config/kitty
+cp .config/kitty/kitty.conf ~/.config/kitty/kitty.conf
+cp .config/kitty/ayu-mirage.conf ~/.config/kitty/ayu-mirage.conf
 ```
-
-This symlinks `kitty.conf` and `ayu-mirage.conf` to `~/.config/kitty/`.
 
 ## Color Scheme
 
-`ayu-mirage.conf` contains the Ayu Mirage color scheme. Reference it in `kitty.conf`:
+`ayu-mirage.conf` contains the Ayu Mirage color scheme. It is referenced in `kitty.conf`:
 
 ```
 include ayu-mirage.conf
